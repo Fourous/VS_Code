@@ -3,12 +3,12 @@
 #include <string.h>
 #include "List.h"
 void showmovie(Item item);
-char *get_str(char *st, int n) {
+char *get_str(char *st, int n) {//函数返回的是一个指针
 	char *ret_val;
 	char *find;
 	ret_val = fgets(st, n, stdin);
 	if (ret_val) {
-		find = strchr(st, '\n');
+		find = strchr(st, '\n');//strchr在st中寻找字符串\n
 		if (find)
 			*find = '\n';
 		else
